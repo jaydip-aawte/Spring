@@ -3,6 +3,7 @@ package com.bean.config;
 import com.bean.Beans.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class MultiBeanConfig {
@@ -21,10 +22,11 @@ public class MultiBeanConfig {
         uobj.setAddress("Mumbai");
         return uobj;
     }
+    @Primary
     @Bean
     User user3(){
         var uobj=new User();
-        uobj.setName("UgraSen2");
+        uobj.setName("Primay Bean");
         uobj.setAddress("Mumbai");
         return uobj;
     }
